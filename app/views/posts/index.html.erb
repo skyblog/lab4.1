@@ -3,4 +3,12 @@
 	<h2><%=post.title%></h2>
 	<p><%=post.content%></p>
 	<small><%=post.created_at%></small>
+	
+	<td><%= link_to 'Show Details', post_path(post) %></td>
+	<td><%= link_to 'Destroy', post_path(post), method: :delete, data:{ confirm: 'Are you sure ?'} %></td>
 <%end%>
+
+</br>
+</br>
+<%= link_to 'Add new posts',new_post_path(@post), :class => 'PostsController' %>
+
